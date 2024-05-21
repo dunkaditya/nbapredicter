@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<title></title>
+<link rel='stylesheet' href='/stylesheets/style.css'>
+</head>
+<body>
+	<h1>UnderTime</h1>
+	{{!-- {{#if user}}
+	<select id="selectbox" class="selectbox" name="" onchange="javascript:location.href = this.value;">
+    <option value="{{user.username}}" selected>Option1</option>
+    <option value="https://www.google.co.in/">Option2</option>
+    <option value="https://www.gmail.com/">Option3</option>
+	</select>
+	{{/if}} --}}
+	<div class='nav'>
+		<a href="/about">About</a> 
+		<a href="/games">Games</a> 
+		<a href="/create">Add Game</a>
+		{{#if user}}
+			<div class = 'username'>
+				logged in as {{user.username}}
+			</div>
+		{{/if}}
+	</div>
+	{{#if user}}
+		<div class = "logout">
+			<a href= "/logout">
+				logout
+			</a>
+		</div>
+	{{/if}}
+	{{{body}}}
+</body>
+</html>

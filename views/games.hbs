@@ -1,0 +1,125 @@
+{{!-- {{#if user}}
+<p>
+Hi {{user.username}}. Let's go shopping!
+</p>
+{{else}}
+<a href="/login">Login</a> or <a href="/register">Register</a> to create a grocery list.
+{{/if}} --}}
+
+<!DOCTYPE html>
+<head>
+<title></title>
+</head>
+<body>
+    <div class = 'heading'>
+        NBA Game Simulations
+        <div class = 'subheading'>
+            Gamble smarter, not harder.
+        </div>
+    </div>
+    <form method="GET" action="/games" class = "filter">
+    <select id="team_name" class="team_name" name="team_name">
+        <option value="" selected disabled></option>
+        <option value="76ers">76ers</option>
+        <option value="Bucks">Bucks</option>
+        <option value="Bulls">Bulls</option>
+        <option value="Cavaliers">Cavaliers</option>
+        <option value="Celtics">Celtics</option>
+        <option value="Clippers">Clippers</option>
+        <option value="Grizzlies">Grizzlies</option>
+        <option value="Hawks">Hawks</option>
+        <option value="Heat">Heat</option>
+        <option value="Hornets">Hornets</option>
+        <option value="Jazz">Jazz</option>
+        <option value="Kings">Kings</option>
+        <option value="Knicks">Knicks</option>
+        <option value="Lakers">Lakers</option>
+        <option value="Magic">Magic</option>
+        <option value="Mavericks">Mavericks</option>
+        <option value="Nets">Nets</option>
+        <option value="Nuggets">Nuggets</option>
+        <option value="Pacers">Pacers</option>
+        <option value="Pelicans">Pelicans</option>
+        <option value="Pistons">Pistons</option>
+        <option value="Raptors">Raptors</option>
+        <option value="Rockets">Rockets</option>
+        <option value="Spurs">Spurs</option>
+        <option value="Suns">Suns</option>
+        <option value="Thunder">Thunder</option>
+        <option value="Timberwolves">Timberwolves</option>
+        <option value="Trail Blazers">Trail Blazers</option>
+        <option value="Warriors">Warriors</option>
+        <option value="Wizards">Wizards</option>
+    </select>
+    <input type="submit", value="Filter">
+    </form>
+
+    <form method="GET" action="/games" class = "filt">
+    <select id="filt" class="filt" name="filt">
+        <option value="all">All Games</option>
+        <option value="my">My Games</option>
+    </select>
+    <input type="submit", value="Filter">
+    </form>
+
+    <div class = 'games' id = 'games'>
+        {{#each game}}
+        <div class = 'game-wrap'>
+            <table class = 'game-header'>
+                <tr class = 'tr'>
+                    <th class = 'date-added'>
+                        {{createdAt}}
+                    </th>
+                    <th class = 'sim-heading'>
+                        MONEY LINE
+                    </th>
+                    <th class = 'sim-heading'>
+                        WIN  PROB 
+                    </th>
+                    <th class = 'sim-heading'>
+                        BET SIZING
+                    </th>
+                <tr/>
+            </table>
+            <div class = 'game-box'>
+                <table class = 'game-content'>
+                    <tr class = 'tr-team'>
+                        <td class = 'logo'>
+                             <img class="logo-img" src="https://secure.espn.com/combiner/i?img=/i/teamlogos/nba/500/{{{home.abr}}}.png&w=56&h=56">
+                        </td>
+                        <td class = 'team-name'>
+                            {{home.name}}
+                        </td>
+                        <td class = 'moneyline'>
+                            {{home.ml}}
+                        </td>
+                        <td class = 'win-perc'>
+                            {{home.win}}
+                        </td>
+                        <td class = 'bet-sizing'>
+                            {{home.kg}}
+                        </td>
+                    <tr/>
+                    <tr class = 'tr-team'>
+                        <td class = 'logo'>
+                             <img class="logo-img"  src="https://secure.espn.com/combiner/i?img=/i/teamlogos/nba/500/{{{away.abr}}}.png&w=56&h=56">
+                        </td>
+                        <td class = 'team-name'>
+                            {{away.name}}
+                        </td>
+                        <td class = 'moneyline'>
+                            {{away.ml}}
+                        </td>
+                        <td class = 'win-perc'>
+                            {{away.win}}
+                        </td>
+                        <td class = 'bet-sizing'>
+                            {{away.kg}}
+                        </td>
+                    <tr/>
+                </table>
+            </div>
+        </div>
+        {{/each}}
+    </div>    
+</body>

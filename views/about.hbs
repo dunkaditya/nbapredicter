@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<head>
+<title></title>
+</head>
+<body>
+    <div class = 'about'>
+        <div class = 'heading'>
+                About
+            <div class = 'subheading'>
+                How do the predictions work?
+            </div>
+        </div>
+        Sports betting in basketball is incredibly difficult, with bias getting in the way of placing optimal bets. It seems impossible to get it right! That's where "Undertime" comes in! We use machine learning regression-based algorithms to find out which team is going to win! For this, we are using PMF modeling. Dhal and Adams from the University of Toronto explain the procedure: “One approach to relational data treats the observations as a matrix and then uses a probabilistic low-rank approximation to discover structure in the data. This approach was pioneered by Hofmann (1999) to model word co-occurrences in text data. These probabilistic matrix factorization (PMF) models have generated a great deal of interest as powerful methods for modeling dyadic data. See Srebro (2004) for a discussion of approaches to machine learning based on matrix factorization and Salakhutdinov and Mnih (2008a) for a current view on applying PMF in practice.” This combined with a neural network linear regression system allows Undertime to create accurate guesses for the outcomes of NBA games. We use data such as ELO – a method for calculating the relative skill levels of teams based on opponents as well as win margin, natural win %, offensive, and defensive efficiency, as well as player-based data. (Note that this has not been implemented yet! The website uses a simple ELO-based calculator to find win probabilities) 
+        <br> 
+        <br>
+        Then, we use an algorithm called Kelly Gambling to find out what percent of the bankroll users should allocate to a given bet. When this number is negative, users should not place a bet at all. Sometimes, the lines are even drawn so that betting on both sides of a game could be profitable!
+    </div>
+</body>
