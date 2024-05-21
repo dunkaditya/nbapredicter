@@ -4,7 +4,9 @@
 
 Sports betting in basketball is incredibly difficult, with bias getting in the way of placing optimal bets. It seems impossible to get it right! That's where "Undertime" comes in!
 
-Undertime is a web app that will allow users to access to top-of-the-line ML software to help place their bets. Users can register and login. Once they're logged in, they can create or view their potential bets – and what UnderTime has to say about it, 
+Undertime is a web app that will allow users to access to top-of-the-line ML software to help place their bets. Users can register and login. Once they're logged in, they can create or view their potential bets – and what UnderTime has to say about it.
+
+To run: run "npm i" to install dependencies, and "npm app.js" to run server on localhost:3000
 
 ## Data Model
 
